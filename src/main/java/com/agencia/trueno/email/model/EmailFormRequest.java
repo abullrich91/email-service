@@ -6,7 +6,7 @@ import lombok.Value;
 @Value
 @Builder
 public class EmailFormRequest {
-    private String completeName;
+    private String fullName;
     private String organization;
     private String phone;
     private String email;

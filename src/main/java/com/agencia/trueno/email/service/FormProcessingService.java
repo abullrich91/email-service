@@ -17,8 +17,8 @@ public class FormProcessingService {
 
     public RestResponse processRequest(EmailFormRequest request) {
         try {
-            emailService.sendEmail(request, false);
-            emailService.sendEmail(request, true);
+            emailService.sendUserEmail(request);
+            emailService.sendOrganizationEmail(request);
             formRepository.storeFormInfo(request);
 
             return RestResponse.builder()

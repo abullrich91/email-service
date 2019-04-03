@@ -23,10 +23,10 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @Slf4j
 public class EmailServiceEndpoint {
 
-    private FormProcessingService formProcessingService;
+    private final FormProcessingService formProcessingService;
 
-    @ApiOperation(value = "Retrieve bundles along with its elements")
-    @PostMapping(produces = APPLICATION_JSON_VALUE, path = "/bundles", params = {"appToken", "uid"})
+    @ApiOperation(value = "Process form data and send emails")
+    @PostMapping(produces = APPLICATION_JSON_VALUE, path = "/process-form")
     public RestResponse getBundlesWithModifiers(
         @RequestBody EmailFormRequest request) {
         return formProcessingService.processRequest(request);
