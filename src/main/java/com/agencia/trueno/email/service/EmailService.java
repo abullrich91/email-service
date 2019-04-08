@@ -23,8 +23,8 @@ public class EmailService {
     private final EmailConfig emailConfig;
 
     private final String username = "somostrueno@gmail.com";
-    // private final String organizationEmail = "pvarela@all-kom.com, sgagliardi@all-kom.com";
-    private final String organizationEmail = "abullrich91@gmail.com, alebull@hotmail.com";
+    private final String organizationEmail = "pvarela@all-kom.com, sgagliardi@all-kom.com";
+    // private final String organizationEmail = "abullrich91@gmail.com, alebull@hotmail.com";
 
     public void sendUserEmail(final EmailFormRequest request) {
 
